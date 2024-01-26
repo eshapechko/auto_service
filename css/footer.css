@@ -4,8 +4,8 @@
 }
 
 .footer__logo {
-  width: 480px;
-  height: 76px;
+  width: 100%;
+  max-width: 480px;
   margin-bottom: 50px;
 }
 
@@ -26,10 +26,13 @@
   margin-bottom: 7px;
 }
 
+.footer__link:hover {
+  color: #d10014;
+}
+
 @media (max-width: 600px) {
   .footer__logo {
-    width: 230px;
-    height: 36px;
+    max-width: 230px;
     margin-bottom: 32px;
   }
 }
