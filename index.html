@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg" />
     <title>AutoService &mdash; мастерский ремонт</title>
 
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <header class="header none">
@@ -40,7 +41,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about none">
         <div class="about__bg">
           <div class="container about__container">
             <h2 class="about__title">
@@ -66,7 +67,7 @@
           </h2>
 
           <form class="contact__form form">
-            <fieldset class="form__fieldset">
+            <fieldset class="form__fieldset form__fieldset_active">
               <legend class="form__title">Выберите нужное направление</legend>
 
               <div class="form__radio-wrapper">
@@ -373,7 +374,7 @@
             </fieldset>
 
             <div class="form__btn-wrapper">
-              <button class="form__btn" type="button">
+              <button class="form__btn form__btn_prev" type="button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"
@@ -400,7 +401,10 @@
                 </svg>
               </button>
 
-              <button class="form__btn form__btn_submit" type="submit">
+              <button
+                class="form__btn form__btn_submit"
+                type="submit"
+                style="display: none">
                 Отправить
               </button>
             </div>
@@ -409,7 +413,7 @@
       </section>
     </main>
 
-    <footer class="footer none">
+    <footer class="footer">
       <div class="container">
         <img
           class="footer__logo"

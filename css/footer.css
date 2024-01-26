@@ -30,21 +30,18 @@
   color: #d10014;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
   .footer__logo {
     max-width: 230px;
     margin-bottom: 32px;
   }
-}
 
-@media (max-width: 510px) {
   .footer {
     padding: 24px 0 20px;
   }
 
   .footer__logo {
     width: 230px;
-    height: 36px;
   }
 
   .footer__wrapper {
