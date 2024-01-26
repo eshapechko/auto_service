@@ -19,6 +19,7 @@
 .form {
   padding: 60px;
   background-color: #fff;
+  border-radius: 32px;
 }
 
 .form__fieldset {
@@ -77,6 +78,8 @@
 
 .form__months {
   margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .form__btn-month {
@@ -87,6 +90,7 @@
 
 .form__btn-month_active {
   color: #d10014;
+  transform: scale(115%);
 }
 
 .form__subtitle {
@@ -152,9 +156,13 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
   padding: 12px 20px;
   border-radius: 50px;
-  background: #f0f4f4;
+  background-color: #f0f4f4;
   border: 1px solid transparent;
 }
 
@@ -173,10 +181,16 @@
   color: #fff;
 }
 
+.form__btn_submit {
+  background-color: #d10014;
+  color: #fff;
+}
+
 .form__btn:disabled {
   color: #222;
   background-color: #f0f4f4;
   opacity: 0.4;
+  pointer-events: none;
 }
 
 @media (max-width: 1080px) {
