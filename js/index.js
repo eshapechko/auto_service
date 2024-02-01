@@ -4,7 +4,7 @@ const formBtnPrev = document.querySelector('.form__btn_prev');
 const formBtnNext = document.querySelector('.form__btn_next');
 const formBtnSubmit = document.querySelector('.form__btn_submit');
 
-const URL = 'https://gelatinous-meadow-shrimp.glitch.me/api';
+const API_URL = 'https://gelatinous-meadow-shrimp.glitch.me/api';
 
 let currentStep = 0;
 
@@ -32,7 +32,15 @@ const updateFieldsetVisibility = () => {
   }
 };
 
+const handleInputForm = ({ currentTarget }) => {
+  if (currentTarget.type.value && currentStep === 0) {
+    formBtnNext.disabled = false;
+  }
+};
+
 const init = () => {
+  formBtnNext.disabled = true;
+
   formBtnNext.addEventListener('click', () => {
     if (currentStep < formFieldsets.length - 1) {
       currentStep += 1;
@@ -50,9 +58,9 @@ const init = () => {
     }
   });
 
-  updateFieldsetVisibility();
+  form.addEventListener('input', handleInputForm);
 
-  formBtnSubmit.addEventListener('click', () => {});
+  updateFieldsetVisibility();
 };
 
 init();
