@@ -301,3 +301,10 @@ const init = () => {
 };
 
 init();
+
+// Input mask
+
+const phone = document.querySelector('#phone');
+const imPhone = new Inputmask('+375(99)999-99-99');
+
+imPhone.mask(phone);
